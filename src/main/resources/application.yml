@@ -1,0 +1,104 @@
+spring:
+  profiles:
+    active: default
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    password: root
+    url: jdbc:mysql://localhost:3306/blog?serverTimezone=UTC
+    username: root
+  devtools:
+    livereload:
+      enabled: true
+  freemarker:
+    cache: false
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+        format_sql: true
+    show-sql: true
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: debug
+        type:
+          descriptor:
+            sql: trace
+    techcourse:
+      myblog:
+        web: INFO
+
+---
+
+spring:
+  profiles: set1
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    password: 11111111
+    url: jdbc:mysql://blog:3306/blog?serverTimezone=UTC
+    username: blog
+  devtools:
+    livereload:
+      enabled: true
+  freemarker:
+    cache: false
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+        format_sql: true
+    show-sql: true
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: debug
+        type:
+          descriptor:
+            sql: trace
+    techcourse:
+      myblog:
+        web: INFO
+server:
+  port: 8081
+
+---
+
+spring:
+  profiles: set2
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    password: 11111111
+    url: jdbc:mysql://blog:3306/blog?serverTimezone=UTC
+    username: blog
+  devtools:
+    livereload:
+      enabled: true
+  freemarker:
+    cache: false
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+        format_sql: true
+    show-sql: true
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: debug
+        type:
+          descriptor:
+            sql: trace
+    techcourse:
+      myblog:
+        web: INFO
+server:
+  port: 8082
